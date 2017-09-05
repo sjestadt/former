@@ -1,5 +1,5 @@
 {
-  "name": "anahkiasen/former",
+  "name": "sjestadt/former",
   "description": "A powerful form builder",
   "homepage": "http://formers.github.io/former/",
   "license": "MIT",
@@ -11,8 +11,8 @@
   ],
   "authors": [
     {
-      "name": "Maxime Fabre",
-      "email": "ehtnam6@gmail.com"
+      "name": "Sean Jestadt",
+      "email": "gmail.com"
     }
   ],
   "require": {
