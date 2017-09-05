@@ -174,9 +174,10 @@ class Group extends Tag
 	public function wrapField($field)
 	{
 		$label = $this->getLabel($field);
+		$name = $field->getName();
 		$field = $this->prependAppend($field);
+		$field .= "<span class=\"help-block with-errors\" v-show=\"form.errors.has('".$name."')\">{{ form.errors.get('".$name."') }}</span>";
 		$field .= $this->getHelp();
-
 		return $this->wrap($field, $label);
 	}
 

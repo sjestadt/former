@@ -369,6 +369,11 @@ abstract class Field extends FormerObject implements FieldInterface
 		return $this;
 	}
 
+	public function getName()
+	{
+		return $this->name;
+	}
+
 	/**
 	 * Get the field's labels
 	 *
