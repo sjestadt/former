@@ -17,7 +17,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "sjestadt/html-object": "dev-master",
+    "sjestadt/html-object": "@dev",
     "illuminate/config": "~5.0",
     "illuminate/container": "~5.0",
     "illuminate/http": "~5.0",

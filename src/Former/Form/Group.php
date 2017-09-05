@@ -144,6 +144,8 @@ class Group extends Tag
 			$this->addClass($this->state);
 		}
 
+		$this->setAttribute(':class', "{'has-error': form.errors.has('email')}");
+
 		// Required state
 		if ($this->app->bound('former.field') and $this->app['former.field']->isRequired()) {
 			$this->addClass($this->app['former']->getOption('required_class'));
