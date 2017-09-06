@@ -76,6 +76,11 @@ class Group extends Tag
 	protected $element = 'div';
 
 	/**
+	 * Latest element name to attach errors
+	 */
+	protected $name = null;
+
+	/**
 	 * Whether a custom group is opened or not
 	 *
 	 * @var boolean
@@ -144,7 +149,7 @@ class Group extends Tag
 			$this->addClass($this->state);
 		}
 
-		$this->setAttribute(':class', "{'has-error': form.errors.has('email')}");
+		$this->setAttribute(':class', "{'has-error': form.errors.has('".$this->name."')}");
 
 		// Required state
 		if ($this->app->bound('former.field') and $this->app['former.field']->isRequired()) {
@@ -177,6 +182,7 @@ class Group extends Tag
 	{
 		$label = $this->getLabel($field);
 		$name = $field->getName();
+		$this->name = $name;
 		$field = $this->prependAppend($field);
 		$field .= "<span class=\"help-block with-errors\" v-show=\"form.errors.has('".$name."')\">{{ form.errors.get('".$name."') }}</span>";
 		$field .= $this->getHelp();
